@@ -1,0 +1,12 @@
+h1,p {
+    text-align: center;
+}
+
+ol li:hover {
+    background-color: rgb(35, 103, 182);
+    font-size: large;
+    transition: ease-in;
+    text-transform: uppercase;
+    text-align: center;
+    
+}
