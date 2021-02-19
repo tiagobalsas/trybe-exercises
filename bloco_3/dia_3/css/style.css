@@ -1,0 +1,7 @@
+ol {
+    background-color: #ffc107be;
+}
+
+ol li:nth-child(2n) {
+    color: green;
+}
