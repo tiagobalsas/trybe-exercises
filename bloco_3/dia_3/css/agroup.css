@@ -8,5 +8,9 @@ ol li:hover {
     transition: ease-in;
     text-transform: uppercase;
     text-align: center;
-    
 }
+
+ul, ol {
+    list-style: none;
+}
+    
