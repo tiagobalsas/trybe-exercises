@@ -22,3 +22,12 @@ ol li:nth-child(2) {
     font-size: 40px;
     border: 1px #1b1e21 solid;
 }
+
+li{
+    font-size: 20px;
+    
+}
+li em {
+    font-weight: bold;
+    
+}
