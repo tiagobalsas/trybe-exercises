@@ -1,8 +1,3 @@
-body h1 {
-    font-size: 100%;
-    font: inherit;
-}
-
 ol.yellow {
     background-color: #ffc107be;
 }
@@ -27,7 +22,3 @@ ol li:nth-child(2) {
     font-size: 40px;
     border: 1px #1b1e21 solid;
 }
-
-/* h1 {
-    border: 1px #1b1e21 solid;
-} */
