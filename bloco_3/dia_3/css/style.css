@@ -1,33 +1,33 @@
 ol.yellow {
-    background-color: #ffc107be;
+  background-color: #ffc107be;
 }
 
 ol li:nth-child(2n) {
-    color: green;
-    
+  color: green;
 }
 /* Aplica estilização somente em números primos */
-ol li:nth-child(2n+1) {
-    text-transform: uppercase;
+ol li:nth-child(2n + 1) {
+  text-transform: uppercase;
 }
 /* Aplica a mesma estilização acima, mas apenas no elemento "2" que também é um número primo */
-ol li:nth-child(2) { 
-    text-transform: uppercase;
+ol li:nth-child(2) {
+  text-transform: uppercase;
 }
 
 .font-red {
-    color: #721c24;
+  color: #721c24;
 }
-.font-red h1 em, h2 em, h3 em, h4 em {
-    font-size: 40px;
-    border: 1px #1b1e21 solid;
+.font-red h1 em,
+h2 em,
+h3 em,
+h4 em {
+  font-size: 40px;
+  border: 1px #1b1e21 solid;
 }
 
-li{
-    font-size: 20px;
-    
+li {
+  font-size: 20px;
 }
 li em {
-    font-weight: bold;
-    
+  font-weight: bold;
 }
