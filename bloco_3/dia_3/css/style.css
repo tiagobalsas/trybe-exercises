@@ -31,3 +31,11 @@ li {
 li em {
   font-weight: bold;
 }
+
+ul.font-blue :nth-child(-n+3){
+    color: #004085;
+}
+
+*[lang^=Java]  {
+    background-color: #f8d7da;
+}
