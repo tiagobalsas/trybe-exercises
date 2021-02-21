@@ -1,7 +1,33 @@
-ol {
+body h1 {
+    font-size: 100%;
+    font: inherit;
+}
+
+ol.yellow {
     background-color: #ffc107be;
 }
 
 ol li:nth-child(2n) {
     color: green;
+    
 }
+/* Aplica estilização somente em números primos */
+ol li:nth-child(2n+1) {
+    text-transform: uppercase;
+}
+/* Aplica a mesma estilização acima, mas apenas no elemento "2" que também é um número primo */
+ol li:nth-child(2) { 
+    text-transform: uppercase;
+}
+
+.font-red {
+    color: #721c24;
+}
+.font-red h1 em, h2 em, h3 em, h4 em {
+    font-size: 40px;
+    border: 1px #1b1e21 solid;
+}
+
+/* h1 {
+    border: 1px #1b1e21 solid;
+} */
