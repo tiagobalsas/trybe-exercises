@@ -39,3 +39,19 @@ ul.font-blue :nth-child(-n+3){
 *[lang^=Java]  {
     background-color: #f8d7da;
 }
+
+ul li a:hover[href="https://pt.stackoverflow.com/"] {
+    color:hsl(27deg 90% 55%);
+}
+ul li a:hover[href="https://www.w3schools.com/"] {
+    color:#4caf50;
+}
+ul li a:hover[href="https://developer.mozilla.org/pt-BR/"] {
+    color: #212121;
+}
+ul li a:hover[href="https://devdocs.io/"] {
+    color:#f0db4f;
+}
+ul li a:hover[href="https://app.betrybe.com/"] {
+    color:#30c18c;
+}
