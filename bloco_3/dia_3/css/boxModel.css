@@ -1,0 +1,67 @@
+.caixa {
+    color: white;
+    display: inline-block;
+    line-height: 50px;
+    text-align: center;
+    vertical-align: top;
+  }
+
+  .width-and-height {
+    height: 50px;
+    width: 50px;
+  }
+
+  .padding {
+  /* insira aqui um padding de 20px na classe abaixo para aplicá-lo aos itens B, C e D */
+  padding: 20px;
+  }
+
+  .margin {
+  /* insira aqui uma margem de 30px na classe abaixo para aplicá-la aos itens C e D */
+  margin: 30px;
+  }
+
+  .border {
+  /* insira aqui uma borda com valor '5px solid black' para aplicá-la ao item D */
+  border: 5px solid black;
+  }
+
+  /* Exercícios de fixação 3.3 */
+
+  .whidthElement {
+    width: 175px;
+  }
+
+  .super-mario {
+    position: absolute;
+    
+  }
+
+  .goomba {
+    float: left;
+    margin-top: 271px;
+    position: absolute;
+    
+  }
+
+  .word {
+    z-index: 2;
+    position: absolute;
+    top: 108px;
+    left: 220px;
+  }
+
+  .baloon {
+    position: absolute;
+    left: 212px;
+    top: 81px;
+    
+    z-index: 1;
+  }
+
+  .bowser {
+    
+    position: absolute;
+    left: 375px;
+    top: 155px;
+  }
