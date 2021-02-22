@@ -1,46 +1,77 @@
 h1 {
-    text-align: center;
-  }
+  text-align: center;
+}
 
-  #podium {
-    border: solid red;
-    height: 165px;
-  }
+#podium {
+  
+  height: 165px;
+}
 
-  #premiacao {
-    clear: both;
-  }
+#podium ul {
+    list-style: none;
+}
 
-  .first {
-    background-color: rgb(235, 200, 84);
-    font-size: 20px;
-    height: 50px;
-    text-align: center;
-    width: 200px;
-    /* display: inline; */
-    margin-left: 562px;
-    float: none;
-    border: solid;
-  }
+#premiacao {
+  clear: both;
+}
 
-  .second {
-    background-color: rgb(219, 219, 219);
-    font-size: 20px;
-    height: 50px;
-    text-align: center;
-    width: 300px;
+.first {
+  background-color: rgb(235, 200, 84);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 200px;
+  /* display: inline; */
+  margin-left: 562px;
+  float: none;
+  
+}
+
+.second {
+  background-color: rgb(219, 219, 219);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+  float: left;
+  
+  margin-left: 263px;
+}
+
+.third {
+  background-color: rgb(170, 142, 106);
+  font-size: 20px;
+  height: 50px;
+  text-align: center;
+  width: 300px;
+  float: right;
+  
+  margin-right: 247px;
+}
+
+#premiacao {
+    
+    margin-top: 10px;
+}
+
+#premiacao h3 {
+    margin-left: 550px;
+}
+
+#premiacao ul li {
+    display: contents;
     float: left;
-    border: solid;
-    margin-left: 257px;
-  }
+    
+}
 
-  .third {
-    background-color: rgb(170, 142, 106);
-    font-size: 20px;
-    height: 50px;
-    text-align: center;
-    width: 300px;
-    float: right;
-    border: solid;
-    margin-right: 231px;
-  }
+.primeiro-lugar {
+    margin-left: 322px;
+}
+.segundo-lugar {
+    margin-left: 322px;
+}
+.terceiro-lugar {
+    margin-left: 322px;
+}
+
+
