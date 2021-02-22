@@ -17,7 +17,13 @@ ol li:nth-child(2) {
 .font-red {
   color: #721c24;
 }
-.font-red h1 em,
+
+h1.font-red {
+  font-size: 40px;
+  border: 1px #1b1e21 solid;
+}
+
+.font-red
 h2 em,
 h3 em,
 h4 em {
