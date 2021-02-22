@@ -1,0 +1,63 @@
+ol.yellow {
+  background-color: #ffc107be;
+}
+
+ol li:nth-child(2n) {
+  color: green;
+}
+/* Aplica estilização somente em números primos */
+ol li:nth-child(2n + 1) {
+  text-transform: uppercase;
+}
+/* Aplica a mesma estilização acima, mas apenas no elemento "2" que também é um número primo */
+ol li:nth-child(2) {
+  text-transform: uppercase;
+}
+
+.font-red {
+  color: #721c24;
+}
+
+h1.font-red {
+  font-size: 40px;
+  border: 1px #1b1e21 solid;
+}
+
+.font-red
+h2 em,
+h3 em,
+h4 em {
+  font-size: 40px;
+  border: 1px #1b1e21 solid;
+}
+
+li {
+  font-size: 20px;
+}
+li em {
+  font-weight: bold;
+}
+
+ul.font-blue :nth-child(-n+3){
+    color: #004085;
+}
+
+*[lang^=Java]  {
+    background-color: #f8d7da;
+}
+
+ul li a:hover[href="https://pt.stackoverflow.com/"] {
+    color:hsl(27deg 90% 55%);
+}
+ul li a:hover[href="https://www.w3schools.com/"] {
+    color:#4caf50;
+}
+ul li a:hover[href="https://developer.mozilla.org/pt-BR/"] {
+    color: #212121;
+}
+ul li a:hover[href="https://devdocs.io/"] {
+    color:#f0db4f;
+}
+ul li a:hover[href="https://app.betrybe.com/"] {
+    color:#30c18c;
+}
