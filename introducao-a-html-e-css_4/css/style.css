@@ -1,5 +1,5 @@
 body {
-  border: 2px solid red;
+  /* border: 2px solid red; */
   margin: 0;
 }
 
@@ -13,18 +13,30 @@ body {
   display: inline;
   margin-top: -87px;
 }
+
+#artigo-principal {
+  width: 650px;
+  float: left;
+  margin-right: 30px;
+  margin-left: -11px;
+}
+
+#img-principal {
+  width: 550px;
+  float: right;
+}
+
 .menu-nav ul li {
   list-style: none;
   display: inline;
   padding-right: 20px;
 }
 
- .menu-nav ul li a {
-    color: #cbbee2;
-    text-decoration: none;
+.menu-nav ul li a {
+  color: #cbbee2;
+  text-decoration: none;
 }
 .menu-nav ul li a:hover {
-
 }
 
 .estilo-cabecalho {
@@ -46,14 +58,19 @@ body {
   padding-left: 10px;
 }
 
-.m-hover :hover{
+.m-hover :hover {
   font-weight: 500;
   color: #fff;
-background-color: transparent;
+  background-color: transparent;
 }
 
 .link-active :active {
   font-weight: 500;
   color: #fff;
   background-color: transparent;
+}
+
+.imagem-principal {
+  height: 365px;
+  width: 550px;
 }
