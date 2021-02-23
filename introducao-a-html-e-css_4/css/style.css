@@ -1,0 +1,43 @@
+body {
+  /* border: 2px solid red; */
+  margin: 0;
+}
+
+#cabecalho {
+  width: 557px;
+}
+
+#menu {
+  width: 350px;
+  float: right;
+  display: inline;
+  margin-top: -87px;
+}
+.menu-nav ul li {
+  list-style: none;
+  display: inline;
+  padding-right: 20px;
+}
+
+ .menu-nav ul li a {
+    color: #cbbee2;
+}
+
+.estilo-cabecalho {
+  background-color: #573d7c;
+  color: #cbbee2;
+  height: 108px;
+  margin-top: -21px;
+  padding-top: 30px;
+}
+
+/* .border {
+  border: 1px solid green;
+} */
+.margin {
+  margin: 20px 30px;
+}
+
+.p-left {
+  padding-left: 10px;
+}
