@@ -1,5 +1,5 @@
 body {
-  /* border: 2px solid red; */
+  border: 2px solid red;
   margin: 0;
 }
 
@@ -21,6 +21,10 @@ body {
 
  .menu-nav ul li a {
     color: #cbbee2;
+    text-decoration: none;
+}
+.menu-nav ul li a:hover {
+
 }
 
 .estilo-cabecalho {
@@ -31,13 +35,25 @@ body {
   padding-top: 30px;
 }
 
-/* .border {
+.border {
   border: 1px solid green;
-} */
+}
 .margin {
   margin: 20px 30px;
 }
 
 .p-left {
   padding-left: 10px;
+}
+
+.m-hover :hover{
+  font-weight: 500;
+  color: #fff;
+background-color: transparent;
+}
+
+.link-active :active {
+  font-weight: 500;
+  color: #fff;
+  background-color: transparent;
 }
