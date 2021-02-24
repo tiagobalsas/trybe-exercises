@@ -1,5 +1,5 @@
 body {
-  /* border: 2px solid red; */
+  border: 2px solid red;
   margin: 0;
 }
 
@@ -18,12 +18,34 @@ body {
   width: 650px;
   float: left;
   margin-right: 30px;
-  margin-left: -11px;
+  /* margin-left: -11px; */
+}
+
+#artigo-principal h2 {
+  text-align: center;
 }
 
 #img-principal {
   width: 550px;
   float: right;
+}
+
+#info-gerais {
+  clear: both;
+  height: 650px;
+}
+
+#sobre {
+  width: 850px;
+  float: right;
+  border: 1px solid;
+}
+
+#tabela {
+  width: 350px;
+  float: left;
+  padding-left: 20px;
+  border: 1px solid;
 }
 
 .menu-nav ul li {
@@ -35,8 +57,6 @@ body {
 .menu-nav ul li a {
   color: #cbbee2;
   text-decoration: none;
-}
-.menu-nav ul li a:hover {
 }
 
 .estilo-cabecalho {
@@ -73,4 +93,8 @@ body {
 .imagem-principal {
   height: 365px;
   width: 550px;
+}
+
+.texto-italico {
+  font-style: italic;
 }
