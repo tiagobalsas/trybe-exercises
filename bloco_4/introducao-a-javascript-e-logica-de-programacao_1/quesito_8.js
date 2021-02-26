@@ -6,8 +6,4 @@ let num1 = 1;
 let num2 = 2;
 let num3 = 3;
 
-if (num3 % 2 == 0) {
-    console.log(true)
-} else {
-    console.log(false)
-}
+num2 % 2 === 0 ? console.log(true) : console.log(false);
