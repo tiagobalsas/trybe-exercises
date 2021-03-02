@@ -7,3 +7,7 @@ let info = {
 
 console.log(`Bem-vinda, ${info.personagem}`)
 console.log(info);
+
+ for (prop in info){
+  console.log(prop)
+} 
