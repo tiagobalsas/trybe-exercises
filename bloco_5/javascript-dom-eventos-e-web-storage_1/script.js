@@ -36,3 +36,13 @@ function letterUp() {
 }
 
 letterUp();
+
+function printOut() {
+  let text = document.getElementsByTagName("p");
+  for (let index = 0; index < text.length; index += 1) {
+    let printText = text[index].innerText;
+    console.log(printText);
+  }
+}
+
+printOut();
