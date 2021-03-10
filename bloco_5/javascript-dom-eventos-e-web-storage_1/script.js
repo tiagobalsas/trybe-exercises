@@ -20,10 +20,19 @@ function colorWhite() {
 }
 
 colorWhite();
-/* 4. Crie uma função que corrija o texto da tag <h1>. */
+
 function correctLetter() {
   let letter = document.getElementsByTagName("h1");
   letter[0].style.fontStyle = "italic";
 }
 
 correctLetter();
+
+function letterUp() {
+  let elementsP = document.getElementsByTagName("p");
+  for (let index = 0; index < elementsP.length; index += 1) {
+    let convert = (elementsP[index].style.textTransform = "upperCase");
+  }
+}
+
+letterUp();
