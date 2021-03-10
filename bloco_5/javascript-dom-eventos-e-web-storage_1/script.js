@@ -6,3 +6,10 @@ function modifyText(msg) {
 }
 
 modifyText(messege);
+
+function alterColor() {
+  let mainContente = document.getElementsByClassName("main-content");
+  mainContente[0].style["background-color"] = "rgb(76,164,109)";
+}
+
+alterColor();
