@@ -13,3 +13,11 @@ function alterColor() {
 }
 
 alterColor();
+
+function colorWhite() {
+  let contenteCenter = document.getElementsByClassName("center-content");
+  contenteCenter[0].style.backgroundColor = "rgb(255,255,255)";
+  console.log(contenteCenter);
+}
+
+colorWhite();
