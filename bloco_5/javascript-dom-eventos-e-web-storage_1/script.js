@@ -17,7 +17,13 @@ alterColor();
 function colorWhite() {
   let contenteCenter = document.getElementsByClassName("center-content");
   contenteCenter[0].style.backgroundColor = "rgb(255,255,255)";
-  console.log(contenteCenter);
 }
 
 colorWhite();
+/* 4. Crie uma função que corrija o texto da tag <h1>. */
+function correctLetter() {
+  let letter = document.getElementsByTagName("h1");
+  letter[0].style.fontStyle = "italic";
+}
+
+correctLetter();
