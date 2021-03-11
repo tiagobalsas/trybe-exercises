@@ -7,21 +7,28 @@ function creatTitle(msg) {
 let msg = "Exercício 5.2 - JavaScript DOM";
 creatTitle(msg);
 
-function creatDiv (){
-  let elementBody = document.querySelector('body')
-  let elementDiv = document.createElement('div')
+function creatDiv() {
+  let elementBody = document.querySelector("body");
+  let elementDiv = document.createElement("div");
   elementDiv.className = "main-content";
-  elementBody.appendChild(elementDiv)
+  elementBody.appendChild(elementDiv);
 }
-creatDiv()
+creatDiv();
 
-/* ;
- */
-
-function divChild(){
+function divChild() {
   let elementDiv = document.querySelector(".main-content");
   let elementDivChild = document.createElement("div");
   elementDivChild.className = "center-content";
-  elementDiv.appendChild(elementDivChild)
+  elementDiv.appendChild(elementDivChild);
 }
-divChild()
+divChild();
+
+function addChildP() {
+  let elementDivChild = document.querySelector(".center-content");
+  let elementP = document.createElement("p");
+  elementP.innerHTML =
+    "Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, in.";
+  elementDivChild.appendChild(elementP);
+}
+
+addChildP();
