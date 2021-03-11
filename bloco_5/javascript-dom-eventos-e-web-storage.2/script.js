@@ -75,6 +75,9 @@ function divChild() {
   let elementDivChild = document.createElement("div");
   elementDivChild.className = "center-content";
   elementDiv.appendChild(elementDivChild);
+
+  // Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde
+  elementDiv.style.backgroundColor = 'green'
 }
 divChild();
 
