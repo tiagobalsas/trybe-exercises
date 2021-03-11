@@ -12,10 +12,15 @@ function creatDiv() {
   let elementDiv = document.createElement("div");
   elementDiv.className = "main-content";
   elementBody.appendChild(elementDiv);
-  /* Adicione a tag div com a classe left-content como filho da tag div criada no passo 2; */
+  // Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
   let divLeftContent = document.createElement("div");
   divLeftContent.className = "left-content";
   elementDiv.appendChild(divLeftContent);
+  // Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+  let divRightContent = document.createElement('div')
+  divRightContent.className = 'right-content'
+  elementDiv.appendChild(divRightContent)
+
 }
 creatDiv();
 
