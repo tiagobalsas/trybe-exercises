@@ -29,6 +29,10 @@ function creatDiv() {
   elementImg.setAttribute("src", "https://picsum.photos/200");
   elementImg.className = "small-image";
   divLeftContent.appendChild(elementImg);
+  // Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div 
+
+  divRightContent.style.marginRight = 'auto'
+
 
   // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
 
@@ -88,5 +92,7 @@ addChildP();
 let leftContent = document.querySelector(".left-content");
 let mainClass = document.querySelector('.main-content')
 mainClass.appendChild(leftContent).remove()
+
+
 
 
