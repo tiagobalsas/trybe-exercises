@@ -26,8 +26,32 @@ function creatDiv() {
   let elementImg = document.createElement("img");
   elementImg.setAttribute("src", "https://picsum.photos/200");
   elementImg.className = "small-image";
-  divLeftContent.appendChild(elementImg)
-  console.log(elementImg);
+  divLeftContent.appendChild(elementImg);
+
+  // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+
+  let numbers = [
+    "Um",
+    "Dois",
+    "Tres",
+    "Quatro",
+    "Cinco",
+    "Seis",
+    "Sete",
+    "Oito",
+    "Nove",
+    "Dez",
+  ];
+  let elementUl = document.createElement("ul");
+  for (let index = 0; index < numbers.length; index++) {
+    const creatList = numbers[index];
+    let list = document.createElement("li");
+    list.innerHTML = creatList;
+    elementUl.appendChild(list);
+  }
+
+  divRightContent.appendChild(elementUl);
+  // divRightContent.appendChild()
 }
 creatDiv();
 
