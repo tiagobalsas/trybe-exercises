@@ -14,3 +14,14 @@ function creatDiv (){
   elementBody.appendChild(elementDiv)
 }
 creatDiv()
+
+/* ;
+ */
+
+function divChild(){
+  let elementDiv = document.querySelector(".main-content");
+  let elementDivChild = document.createElement("div");
+  elementDivChild.className = "center-content";
+  elementDiv.appendChild(elementDivChild)
+}
+divChild()
