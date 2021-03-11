@@ -2,6 +2,8 @@ function creatTitle(msg) {
   let elementTitle = document.querySelector("body");
   let creatElementH = document.createElement("h1");
   creatElementH.innerHTML = msg;
+  // Adicione a classe title na tag h1 criada
+  creatElementH.className = "title";
   elementTitle.appendChild(creatElementH);
 }
 let msg = "Exercício 5.2 - JavaScript DOM";
