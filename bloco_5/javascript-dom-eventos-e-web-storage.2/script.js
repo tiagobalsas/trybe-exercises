@@ -51,7 +51,14 @@ function creatDiv() {
   }
 
   divRightContent.appendChild(elementUl);
-  // divRightContent.appendChild()
+
+  // Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
+
+  for (let indice = 0; indice < 3; indice += 1) {
+    let elementHTres = document.createElement("h3");
+    elementHTres.innerHTML = "Elemento h3";
+    elementDiv.appendChild(elementHTres);
+  }
 }
 creatDiv();
 
@@ -72,3 +79,6 @@ function addChildP() {
 }
 
 addChildP();
+/* let addHTres = document.createElement("h3");
+  addHTres.innerHTML = "Tag H3";
+  elementDiv.appendChild(addHTres) */
