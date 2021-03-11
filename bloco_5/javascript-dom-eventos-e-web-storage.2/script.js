@@ -59,6 +59,8 @@ function creatDiv() {
   for (let indice = 0; indice < 3; indice += 1) {
     let elementHTres = document.createElement("h3");
     elementHTres.innerHTML = "Elemento h3";
+    // Adicione a classe description nas 3 tags h3 criadas
+    elementHTres.className = "description";
     elementDiv.appendChild(elementHTres);
   }
 }
