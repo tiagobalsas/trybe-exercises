@@ -6,3 +6,11 @@ function creatTitle(msg) {
 }
 let msg = "Exercício 5.2 - JavaScript DOM";
 creatTitle(msg);
+
+function creatDiv (){
+  let elementBody = document.querySelector('body')
+  let elementDiv = document.createElement('div')
+  elementDiv.className = "main-content";
+  elementBody.appendChild(elementDiv)
+}
+creatDiv()
