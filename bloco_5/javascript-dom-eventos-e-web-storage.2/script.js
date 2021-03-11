@@ -17,10 +17,17 @@ function creatDiv() {
   divLeftContent.className = "left-content";
   elementDiv.appendChild(divLeftContent);
   // Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
-  let divRightContent = document.createElement('div')
-  divRightContent.className = 'right-content'
-  elementDiv.appendChild(divRightContent)
+  let divRightContent = document.createElement("div");
+  divRightContent.className = "right-content";
+  elementDiv.appendChild(divRightContent);
 
+  // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do div criado no passo 5;
+
+  let elementImg = document.createElement("img");
+  elementImg.setAttribute("src", "https://picsum.photos/200");
+  elementImg.className = "small-image";
+  divLeftContent.appendChild(elementImg)
+  console.log(elementImg);
 }
 creatDiv();
 
