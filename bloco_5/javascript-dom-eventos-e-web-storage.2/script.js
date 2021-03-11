@@ -83,6 +83,10 @@ function addChildP() {
 }
 
 addChildP();
-/* let addHTres = document.createElement("h3");
-  addHTres.innerHTML = "Tag H3";
-  elementDiv.appendChild(addHTres) */
+
+// Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() 
+let leftContent = document.querySelector(".left-content");
+let mainClass = document.querySelector('.main-content')
+mainClass.appendChild(leftContent).remove()
+
+
