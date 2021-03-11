@@ -29,10 +29,9 @@ function creatDiv() {
   elementImg.setAttribute("src", "https://picsum.photos/200");
   elementImg.className = "small-image";
   divLeftContent.appendChild(elementImg);
-  // Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div 
+  // Centralize o div criado no passo 6 (aquele que possui a classe right-content ). Dica: para centralizar, basta configurar o margin-right: auto do div
 
-  divRightContent.style.marginRight = 'auto'
-
+  divRightContent.style.marginRight = "auto";
 
   // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
 
@@ -52,11 +51,14 @@ function creatDiv() {
   for (let index = 0; index < numbers.length; index++) {
     const creatList = numbers[index];
     let list = document.createElement("li");
+    list.className = "list";
     list.innerHTML = creatList;
     elementUl.appendChild(list);
   }
 
   divRightContent.appendChild(elementUl);
+
+  // let removeItem = document.querySelector('.elementUl')
 
   // Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
 
@@ -67,6 +69,15 @@ function creatDiv() {
     elementHTres.className = "description";
     elementDiv.appendChild(elementHTres);
   }
+  // // Remova os dois últimos elementos ( nove e dez ) da lista criada no passo 8.
+  // let removeElementsList = document.querySelector(".list");
+  // for (let index = 0; index < removeElementsList.length; index++) {
+  //   const element = removeElementsList[index];
+
+  //   if (element.innerText.includes("nove")) {
+  //     removeElementsList.remove(element);
+  //   }
+  // }
 }
 creatDiv();
 
@@ -77,7 +88,7 @@ function divChild() {
   elementDiv.appendChild(elementDivChild);
 
   // Troque a cor de fundo do elemento pai da div criada no passo 3 (aquela que possui a classe center-content ) para a cor verde
-  elementDiv.style.backgroundColor = 'green'
+  elementDiv.style.backgroundColor = "green";
 }
 divChild();
 
@@ -91,11 +102,7 @@ function addChildP() {
 
 addChildP();
 
-// Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild() 
+// Remova o div criado no passo 5 (aquele que possui a classe left-content ). Utilize a função .removeChild()
 let leftContent = document.querySelector(".left-content");
-let mainClass = document.querySelector('.main-content')
-mainClass.appendChild(leftContent).remove()
-
-
-
-
+let mainClass = document.querySelector(".main-content");
+mainClass.appendChild(leftContent).remove();
