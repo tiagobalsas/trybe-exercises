@@ -9,8 +9,8 @@
   </head>
   <body>
     <main>
-      <section>
-        <fieldset>
+      <section id="infoPessoal">
+        <fieldset id="dadosPessoais">
           <legend>Dados pessoais</legend>
           <div id="formName">
             <label for="fullName">Nome completo :</label>
@@ -50,9 +50,43 @@
           </div>
           <div id="formTipo">
             <label for="casa">Casa</label>
-            <input type="radio" name="tipo" id="casa" value="casa">
+            <input type="radio" name="tipo" id="casa" value="casa" />
             <label for="apartamento">Apartamento</label>
-            <input type="radio" name="tipo" id="apartamento" value="apartamento">
+            <input
+              type="radio"
+              name="tipo"
+              id="apartamento"
+              value="apartamento"
+            />
+          </div>
+        </fieldset>
+      </section>
+      <section id="InfoEmprego">
+        <fieldset id="ultimoEmprego">
+          <legend>Último Emprego</legend>
+          <div id="resumo">
+            <p>Resumo do último Emprego</p>
+            <textarea
+              name="textoResumo"
+              id="textoResumo"
+              cols="50"
+              rows="10"
+              required
+              maxlength="1000"
+              placeholder="Digite um breve resumo do da última experiência"
+            ></textarea>
+          </div>
+          <div id="formCargo">
+            <label for="cargo">Cargo :</label>
+            <input type="text" required maxlength="40" />
+            <div>
+              <label for="descricaoCargo">Descrição do Cargo</label>
+              <input type="text" required maxlength="500" />
+            </div>
+            <div>
+              <label for="dataInicio">Data inicio</label>
+              <input type="text" id="dataInicio" placeholder="dd/mm/aaaa" required>
+            </div>
           </div>
         </fieldset>
       </section>
