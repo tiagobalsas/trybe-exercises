@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Criando um formulário de currículo</title>
+  </head>
+  <body>
+    <main>
+      <section id="infoPessoal">
+        <fieldset id="dadosPessoais">
+          <legend>Dados pessoais</legend>
+          <div id="formName">
+            <label for="fullName">Nome completo :</label>
+            <input
+              type="text"
+              id="fullName"
+              name="fullName"
+              maxlength="40"
+              required
+            />
+          </div>
+          <div id="formEamil">
+            <label for="email">Informe o email :</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              maxlength="50"
+              required
+            />
+          </div>
+          <div id="formCPF">
+            <label for="cpf">Inform CPF :</label>
+            <input type="number" name="cpf" id="cpf" maxlength="11" required />
+          </div>
+          <div id="formEndereco">
+            <label for="endereco">Informe o endereço :</label>
+            <input type="text" maxlength="200" required />
+          </div>
+          <div id="formCidade">
+            <label for="cidade">Informa Cidade :</label>
+            <input type="text" maxlength="28" required />
+          </div>
+          <div id="formUF">
+            <label for="uf">Informe UF :</label>
+            <select name="uf" id="uf"></select>
+          </div>
+          <div id="formTipo">
+            <label for="casa">Casa</label>
+            <input type="radio" name="tipo" id="casa" value="casa" />
+            <label for="apartamento">Apartamento</label>
+            <input
+              type="radio"
+              name="tipo"
+              id="apartamento"
+              value="apartamento"
+            />
+          </div>
+        </fieldset>
+      </section>
+      <section id="InfoEmprego">
+        <fieldset id="ultimoEmprego">
+          <legend>Último Emprego</legend>
+          <div id="resumo">
+            <p>Resumo do último Emprego</p>
+            <textarea
+              name="textoResumo"
+              id="textoResumo"
+              cols="50"
+              rows="10"
+              required
+              maxlength="1000"
+              placeholder="Digite um breve resumo do da última experiência"
+            ></textarea>
+          </div>
+          <div id="formCargo">
+            <label for="cargo">Cargo :</label>
+            <input type="text" required maxlength="40" />
+            <div>
+              <label for="descricaoCargo">Descrição do Cargo</label>
+              <input type="text" required maxlength="500" />
+            </div>
+            <div>
+              <label for="dataInicio">Data inicio</label>
+              <input type="text" id="dataInicio" placeholder="dd/mm/aaaa" required>
+            </div>
+          </div>
+        </fieldset>
+        <button id="validate">Validar informções</button>
+      </section>
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
