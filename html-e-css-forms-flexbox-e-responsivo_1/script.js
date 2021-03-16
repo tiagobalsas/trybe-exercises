@@ -54,3 +54,15 @@ function validateDate() {
   });
 }
 validateDate();
+
+function validadeData() {
+  const button = document.querySelector("#validate");
+  button.addEventListener("click", () => {
+    const valuesForm = document.querySelector("#form");
+    let fullName = form.fullName;
+    if (fullName.value == "") {
+      alert("Campo vazio");
+    } else console.log(fullName.value)
+  });
+}
+validadeData();
