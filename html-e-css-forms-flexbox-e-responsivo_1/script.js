@@ -58,11 +58,15 @@ validateDate();
 function validadeData() {
   const button = document.querySelector("#validate");
   button.addEventListener("click", () => {
-    const valuesForm = document.querySelector("#form");
-    let fullName = form.fullName;
-    if (fullName.value == "") {
-      alert("Campo vazio");
-    } else console.log(fullName.value)
+    const valuesForm = document.querySelectorAll("#form input");
+    valuesForm.values();
+    valuesForm.forEach((indice) => {
+      let listInput = indice.value;
+      if (listInput === "") {
+        console.log("campo vazio");
+      } else console.log(listInput);
+    });
+    // console.log(valuesForm);
   });
 }
 validadeData();
