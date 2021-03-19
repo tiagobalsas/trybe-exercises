@@ -63,10 +63,26 @@ function validadeData() {
     valuesForm.forEach((indice) => {
       let listInput = indice.value;
       if (listInput === "") {
-        console.log("campo vazio");
-      } else console.log(listInput);
+        alert("campo vazio");
+        onfocus(listInput);
+      } else {
+        console.log(listInput);
+      }
     });
-    // console.log(valuesForm);
   });
 }
 validadeData();
+
+function stopDefAction(evt) {
+  evt.preventDefault();
+  let consolidado = document.querySelector("#consolidado");
+  let createP = document.createElement("p");
+  const valuesForm = document.querySelectorAll("#form input");
+  valuesForm.forEach((indice) => {
+    let listInput = indice.value;
+    createP.appendChild(indice);
+    console.log(createDiv);
+  });
+}
+
+stopDefAction();
