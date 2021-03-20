@@ -41,19 +41,7 @@ function creatUF(uf) {
 }
 creatUF(uf);
 
-function validateDate() {
-  const date = document.querySelector("#dataInicio");
-  date.addEventListener("change", () => {
-    const getDate = date.value;
-    const day = parseInt(getDate.slice(0, 2));
-    const month = parseInt(getDate.slice(3, 5));
-    const year = parseInt(getDate.slice(6, 10));
-    if (day >= 1 && day <= 31 && month >= 1 && month <= 12 && year > 1900) {
-      return true;
-    } else alert("data inválida");
-  });
-}
-validateDate();
+let date = new Pikaday({ field: document.querySelector("#dataInicio") });
 
 let formConsolidado = {};
 function validadeData() {
