@@ -15,7 +15,8 @@
     <title>Criando um formulário de currículo</title>
   </head>
   <body>
-    <header class="container display-4"> Cadastro de Currículo</header>
+    <div class="bg">
+<header class="container display-4"> Cadastro de Currículo</header>
     <form action="" method="post" id="form">
       <main class="container">
         <section id="infoPessoal">
@@ -150,14 +151,16 @@
             </div>
           </fieldset>
           <div class="footer">
-            <button id="validate" class="btn btn-success btn-sm" >Enviar currículo</button>
-            <button id="clear" class="btn btn-danger btn-sm">Limpar</button>
+            <button id="validate" class="btn btn-success btn-sm mb-3 mt-3 mr-2" >Enviar currículo</button>
+            <button id="clear" class="btn btn-danger btn-sm mb-3 mt-3">Limpar</button>
           </div>
         </section>
 
         <div id="consolidado"></div>
       </main>
     </form>
+    </div>
+    
     <script
       src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
