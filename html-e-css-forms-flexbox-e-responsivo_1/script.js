@@ -55,6 +55,7 @@ function validateDate() {
 }
 validateDate();
 
+let formConsolidado = {};
 function validadeData() {
   const button = document.querySelector("#validate");
   button.addEventListener("click", () => {
@@ -66,7 +67,7 @@ function validadeData() {
         alert("campo vazio");
         onfocus(listInput);
       } else {
-        console.log(listInput);
+        formConsolidado[indice.getAttribute("data-key")] = indice.value;
       }
     });
   });
@@ -78,16 +79,12 @@ function stopDefAction() {
   button.addEventListener("click", (event) => {
     event.preventDefault();
     let consolidado = document.querySelector("#consolidado");
-    let createP = document.createElement("p");
-    const valuesForm = document.querySelectorAll("#form input");
-    valuesForm.forEach((indice) => {
-      let listInput = indice.value;
-      createP.appendChild(indice);
-      // console.log(createDiv);
-    });
+    for (let key in formConsolidado) {
+      let createElmenteP = document.createElement("p");
+      createElmenteP.innerText = `${key} : ${formConsolidado[key]}`;
+      consolidado.appendChild(createElmenteP);
+    }
   });
 }
 
 stopDefAction();
-
-

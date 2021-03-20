@@ -21,6 +21,7 @@
                 id="fullName"
                 name="fullName"
                 maxlength="40"
+                data-key="Nome Completo"
                 required
               />
             </div>
@@ -31,16 +32,18 @@
                 name="email"
                 id="email"
                 maxlength="50"
+                data-key="Email"
                 required
               />
             </div>
             <div id="formCPF">
               <label for="cpf">Inform CPF :</label>
               <input
-                type="number"
+                type="text"
                 name="cpf"
                 id="cpf"
                 maxlength="11"
+                data-key="CPF"
                 required
               />
             </div>
@@ -51,6 +54,7 @@
                 name="endereco"
                 id="endereco"
                 maxlength="200"
+                data-key="Endereço"
                 required
               />
             </div>
@@ -61,22 +65,24 @@
                 name="cidade"
                 id="cidade"
                 maxlength="28"
+                data-key="Cidade"
                 required
               />
             </div>
             <div id="formUF">
               <label for="uf">Informe UF :</label>
-              <select name="uf" id="uf"></select>
+              <select name="uf" id="uf" data-key="UF"></select>
             </div>
             <div id="formTipo">
               <label for="casa">Casa</label>
-              <input type="radio" name="tipo" id="casa" value="casa" checked />
+              <input type="radio" name="tipo" id="casa" value="casa" data-key="Casa" checked />
               <label for="apartamento">Apartamento</label>
               <input
                 type="radio"
                 name="tipo"
                 id="apartamento"
                 value="apartamento"
+                data-key="Apartamento"
               />
             </div>
           </fieldset>
@@ -92,16 +98,17 @@
                 cols="50"
                 rows="10"
                 required
+                data-key="Resumo do último emprego"
                 maxlength="1000"
                 placeholder="Digite um breve resumo do da última experiência"
               ></textarea>
             </div>
             <div id="formCargo">
               <label for="cargo">Cargo :</label>
-              <input type="text" required maxlength="40" />
+              <input type="text" data-key="Cargo" required maxlength="40" />
               <div>
                 <label for="descricaoCargo">Descrição do Cargo</label>
-                <input type="text" required maxlength="500" />
+                <input type="text" data-key="Descrição do Cargo" required maxlength="500" />
               </div>
               <div>
                 <label for="dataInicio">Data inicio</label>
@@ -109,6 +116,7 @@
                   type="text"
                   id="dataInicio"
                   placeholder="dd/mm/aaaa"
+                  data-key="Data inicio"
                   required
                 />
               </div>
