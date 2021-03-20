@@ -88,3 +88,13 @@ function stopDefAction() {
 }
 
 stopDefAction();
+
+function clearData() {
+  let btnClear = document.querySelector("#clear");
+  btnClear.addEventListener("click", (event) => {
+    event.preventDefault();
+    let consolidado = document.querySelector("#consolidado");
+    consolidado.innerHTML = "";
+  });
+}
+clearData();
