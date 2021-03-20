@@ -73,16 +73,21 @@ function validadeData() {
 }
 validadeData();
 
-function stopDefAction(evt) {
-  evt.preventDefault();
-  let consolidado = document.querySelector("#consolidado");
-  let createP = document.createElement("p");
-  const valuesForm = document.querySelectorAll("#form input");
-  valuesForm.forEach((indice) => {
-    let listInput = indice.value;
-    createP.appendChild(indice);
-    console.log(createDiv);
+function stopDefAction() {
+  const button = document.querySelector("#validate");
+  button.addEventListener("click", (event) => {
+    event.preventDefault();
+    let consolidado = document.querySelector("#consolidado");
+    let createP = document.createElement("p");
+    const valuesForm = document.querySelectorAll("#form input");
+    valuesForm.forEach((indice) => {
+      let listInput = indice.value;
+      createP.appendChild(indice);
+      // console.log(createDiv);
+    });
   });
 }
 
 stopDefAction();
+
+
