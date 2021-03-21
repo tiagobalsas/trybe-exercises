@@ -1,3 +1,11 @@
+#paragraph {
+  color: rgb(50, 52, 51);
+}
+
+#hr {
+    width: 25%;
+    margin-top: 5px;
+}
 .cotumize-header {
   background-color: rgb(50, 52, 51);
 }
@@ -11,10 +19,25 @@
   align-items: center;
 }
 
-#paragraph {
-  color: rgb(50, 52, 51);
+.container-gallery {
+  width: 590px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
 
-/* .item {
-  
-} */
+.container-h {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.bg-img {
+  background-color: rgb(241, 241, 241);
+  box-shadow: 3px 3px rgb(198, 194, 190, 0.5);
+  border-radius: 10px;
+  margin: 2px;
+}
