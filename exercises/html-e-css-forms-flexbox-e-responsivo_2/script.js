@@ -62,38 +62,21 @@ let date = new Pikaday({
   },
 });
 
-let formConsolidado = {};
-function validadeData() {
-  const button = document.querySelector("#validate");
-  button.addEventListener("click", () => {
-    const valuesForm = document.querySelectorAll("#form input");
-    valuesForm.values();
-    valuesForm.forEach((indice) => {
-      let listInput = indice.value;
-      if (listInput === "") {
-        alert("campo vazio");
-        onfocus(listInput);
-      } else {
-        formConsolidado[indice.getAttribute("data-key")] = indice.value;
-      }
-    });
-  });
-}
-validadeData();
-
 function stopDefAction() {
   const button = document.querySelector("#validate");
   button.addEventListener("click", (event) => {
     event.preventDefault();
     let consolidado = document.querySelector("#consolidado");
-    for (let key in formConsolidado) {
-      let createElmenteP = document.createElement("p");
-      createElmenteP.innerText = `${key} : ${formConsolidado[key]}`;
+    let selectAllInputs = document.querySelectorAll('input, #uf, textarea')
+    selectAllInputs.forEach ((el)=>{
+    let createElmenteP = document.createElement("p");
+      createElmenteP.innerText = `${el.value}`;
       consolidado.appendChild(createElmenteP);
-    }
+      console.log(el);
+    })
+      
   });
 }
-
 stopDefAction();
 
 function clearData() {

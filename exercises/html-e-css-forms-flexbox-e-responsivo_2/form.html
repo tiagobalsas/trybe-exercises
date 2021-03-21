@@ -22,7 +22,8 @@
   <body>
     <div class="bg">
       <header class="container display-4">Cadastro de Currículo</header>
-      <form action="" method="post" id="form">
+      <form action="" method="post" id="form" class="js-form
+      ">
         <main class="container">
           <section id="infoPessoal">
             <fieldset id="dadosPessoais">
@@ -36,6 +37,7 @@
                   name="fullName"
                   maxlength="40"
                   data-key="Nome Completo"
+                  data-validate-field="fullName"
                   required
                 />
               </div>
@@ -48,6 +50,7 @@
                   id="email"
                   maxlength="50"
                   data-key="Email"
+                  data-validate-field="email"
                   required
                 />
               </div>
@@ -60,6 +63,7 @@
                   id="cpf"
                   maxlength="11"
                   data-key="CPF"
+                  data-validate-field="cpf"
                   required
                 />
               </div>
@@ -72,6 +76,7 @@
                   id="endereco"
                   maxlength="200"
                   data-key="Endereço"
+                  data-validate-field="endereco"
                   required
                 />
               </div>
@@ -84,12 +89,13 @@
                   id="cidade"
                   maxlength="28"
                   data-key="Cidade"
+                  data-validate-field="cidade"
                   required
                 />
               </div>
               <div id="formUF">
                 <label for="uf">Informe UF :</label>
-                <select name="uf" id="uf" data-key="UF"></select>
+                <select name="uf" id="uf" data-validate-field="uf" data-key="UF"></select>
               </div>
               <div id="formTipo">
                 <label for="casa">Casa</label>
@@ -99,6 +105,7 @@
                   id="casa"
                   value="casa"
                   data-key="Casa"
+                  data-validate-field="radio"
                   checked
                 />
                 <label for="apartamento">Apartamento</label>
@@ -107,6 +114,7 @@
                   name="tipo"
                   id="apartamento"
                   value="apartamento"
+                  data-validate-field="radio"
                   data-key="Apartamento"
                 />
               </div>
@@ -123,6 +131,7 @@
                   id="textoResumo"
                   cols="40"
                   rows="5"
+                  data-validate-field="textoResumo"
                   required
                   data-key="Resumo do último emprego"
                   maxlength="1000"
@@ -132,18 +141,22 @@
               <div id="formCargo">
                 <label for="cargo">Cargo :</label>
                 <input
+                name="cargo"
                   class="form-control form-control-sm"
                   type="text"
                   data-key="Cargo"
+                  data-validate-field="cargo"
                   required
                   maxlength="40"
                 />
                 <div>
                   <label for="descricaoCargo">Descrição do Cargo</label>
                   <input
+                  name="descricaoCargo"
                     class="form-control form-control-sm"
                     type="text"
                     data-key="Descrição do Cargo"
+                    data-validate-field="descricaoCargo"
                     required
                     maxlength="500"
                   />
@@ -196,6 +209,49 @@
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
     <script src="./moment.min.js"></script>
+    <script src="./just-validate.min.js"></script>
     <script src="./script.js"></script>
+    <script>
+      new JustValidate('.js-form', {
+      rules: {
+        email: {
+          required: true,
+          email: true,
+        },
+        cpf: {
+          required:true,
+        },
+        endereco: {
+          required: true,
+        },
+        uf: {
+          'function': (a, v) => {
+            return (v !== 'Selecione um estado');
+          }
+        },
+        radio: {
+          required: true,
+        },
+        resumo: {
+          required: true,
+        },
+        cargo: {
+          required: true,
+        },
+        descricaoCargo: {
+          required: true,
+        },
+        dataInicio: {
+          required: true,
+        },
+        anotherField: { required: true},
+      },
+      messages: {
+        state: 'You must choose an state',
+      },
+      focusWrongField: true,
+
+    });
+    </script>
   </body>
 </html>
