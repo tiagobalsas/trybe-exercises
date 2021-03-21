@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="shortcut icon" href="#" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+      integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/pikaday/css/pikaday.css"
+    />
+    <title>Criando um formulário de currículo</title>
+  </head>
+  <body>
+    <div class="bg">
+      <header class="container display-4">Cadastro de Currículo</header>
+      <form action="" method="post" id="form" class="js-form
+      ">
+        <main class="container">
+          <section id="infoPessoal">
+            <fieldset id="dadosPessoais">
+              <legend>Dados pessoais</legend>
+              <div id="formName">
+                <label for="fullName">Nome completo :</label>
+                <input
+                  class="form-control form-control-sm"
+                  type="text"
+                  id="fullName"
+                  name="fullName"
+                  maxlength="40"
+                  data-key="Nome Completo"
+                  data-validate-field="fullName"
+                  required
+                />
+              </div>
+              <div id="formEamil" class="form-group">
+                <label for="email">Informe o email :</label>
+                <input
+                  class="form-control form-control-sm"
+                  type="email"
+                  name="email"
+                  id="email"
+                  maxlength="50"
+                  data-key="Email"
+                  data-validate-field="email"
+                  required
+                />
+              </div>
+              <div id="formCPF">
+                <label for="cpf">Inform CPF :</label>
+                <input
+                  class="form-control form-control-sm"
+                  type="text"
+                  name="cpf"
+                  id="cpf"
+                  maxlength="11"
+                  data-key="CPF"
+                  data-validate-field="cpf"
+                  required
+                />
+              </div>
+              <div id="formEndereco">
+                <label for="endereco">Informe o endereço :</label>
+                <input
+                  class="form-control form-control-sm"
+                  type="text"
+                  name="endereco"
+                  id="endereco"
+                  maxlength="200"
+                  data-key="Endereço"
+                  data-validate-field="endereco"
+                  required
+                />
+              </div>
+              <div id="formCidade">
+                <label for="cidade">Informa Cidade :</label>
+                <input
+                  class="form-control form-control-sm"
+                  type="text"
+                  name="cidade"
+                  id="cidade"
+                  maxlength="28"
+                  data-key="Cidade"
+                  data-validate-field="cidade"
+                  required
+                />
+              </div>
+              <div id="formUF">
+                <label for="uf">Informe UF :</label>
+                <select name="uf" id="uf" data-validate-field="uf" data-key="UF"></select>
+              </div>
+              <div id="formTipo">
+                <label for="casa">Casa</label>
+                <input
+                  type="radio"
+                  name="tipo"
+                  id="casa"
+                  value="casa"
+                  data-key="Casa"
+                  data-validate-field="radio"
+                  checked
+                />
+                <label for="apartamento">Apartamento</label>
+                <input
+                  type="radio"
+                  name="tipo"
+                  id="apartamento"
+                  value="apartamento"
+                  data-validate-field="radio"
+                  data-key="Apartamento"
+                />
+              </div>
+            </fieldset>
+          </section>
+          <section id="InfoEmprego">
+            <fieldset id="ultimoEmprego">
+              <legend>Último Emprego</legend>
+              <div id="resumo">
+                <p class="lead">Resumo do último Emprego</p>
+                <textarea
+                  class="form-control form-control-sm"
+                  name="textoResumo"
+                  id="textoResumo"
+                  cols="40"
+                  rows="5"
+                  data-validate-field="textoResumo"
+                  required
+                  data-key="Resumo do último emprego"
+                  maxlength="1000"
+                  placeholder="Digite um breve resumo do da última experiência"
+                ></textarea>
+              </div>
+              <div id="formCargo">
+                <label for="cargo">Cargo :</label>
+                <input
+                name="cargo"
+                  class="form-control form-control-sm"
+                  type="text"
+                  data-key="Cargo"
+                  data-validate-field="cargo"
+                  required
+                  maxlength="40"
+                />
+                <div>
+                  <label for="descricaoCargo">Descrição do Cargo</label>
+                  <input
+                  name="descricaoCargo"
+                    class="form-control form-control-sm"
+                    type="text"
+                    data-key="Descrição do Cargo"
+                    data-validate-field="descricaoCargo"
+                    required
+                    maxlength="500"
+                  />
+                </div>
+                <div>
+                  <label for="dataInicio">Data inicio</label>
+                  <input
+                    class="form-control form-control-sm"
+                    type="text"
+                    id="dataInicio"
+                    placeholder="dd/mm/aaaa"
+                    data-key="Data inicio"
+                    required
+                  />
+                </div>
+              </div>
+            </fieldset>
+            <div class="footer">
+              <button
+                id="validate"
+                class="btn btn-success btn-sm mb-3 mt-3 mr-2"
+              >
+                Enviar currículo
+              </button>
+              <button id="clear" class="btn btn-danger btn-sm mb-3 mt-3">
+                Limpar
+              </button>
+            </div>
+          </section>
+
+          <div id="consolidado"></div>
+        </main>
+      </form>
+    </div>
+
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/npm/pikaday/pikaday.js"></script>
+    <script src="./moment.min.js"></script>
+    <script src="./just-validate.min.js"></script>
+    <script src="./script.js"></script>
+    <script>
+      new JustValidate('.js-form', {
+      rules: {
+        email: {
+          required: true,
+          email: true,
+        },
+        cpf: {
+          required:true,
+        },
+        endereco: {
+          required: true,
+        },
+        uf: {
+          'function': (a, v) => {
+            return (v !== 'Selecione um estado');
+          }
+        },
+        radio: {
+          required: true,
+        },
+        resumo: {
+          required: true,
+        },
+        cargo: {
+          required: true,
+        },
+        descricaoCargo: {
+          required: true,
+        },
+        dataInicio: {
+          required: true,
+        },
+        anotherField: { required: true},
+      },
+      messages: {
+        state: 'You must choose an state',
+      },
+      focusWrongField: true,
+
+    });
+    </script>
+  </body>
+</html>
