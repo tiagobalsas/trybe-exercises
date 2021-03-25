@@ -27,5 +27,5 @@ const orderNumbers = (x) => {
   }
   return oddsAndEvens;
 };
-console.log(oddsAndEvens);
-console.log(orderNumbers(oddsAndEvens));
+
+console.log(`${orderNumbers(oddsAndEvens)}`);
