@@ -12,8 +12,20 @@ const testingScope = (escopo) => {
 
 testingScope(true);
 
-      const oddsAndEvens = [13, 3, 4, 10, 7, 2];
+const oddsAndEvens = [13, 3, 4, 10, 7, 2];
 
-      // Seu código aqui.
-
-      console.log(oddsAndEvens);
+const orderNumbers = (x) => {
+  let aux;
+  for (let index = 0; index < oddsAndEvens.length; index++) {
+    for (let indice = 0; indice < oddsAndEvens.length - index; indice++) {
+      if (oddsAndEvens[indice] > oddsAndEvens[indice + 1]) {
+        aux = oddsAndEvens[indice + 1];
+        oddsAndEvens[indice + 1] = oddsAndEvens[indice];
+        oddsAndEvens[indice] = aux;
+      }
+    }
+  }
+  return oddsAndEvens;
+};
+console.log(oddsAndEvens);
+console.log(orderNumbers(oddsAndEvens));
