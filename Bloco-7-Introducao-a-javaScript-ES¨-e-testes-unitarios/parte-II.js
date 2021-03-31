@@ -10,3 +10,11 @@ const factor = (naturalNumber) => {
 };
 
 factor(4);
+
+const searchBiggerPhrase = (phrase) => {
+  const longestWord = phrase.split(" ");
+  const words = longestWord.sort((a, b) => b.length - a.length);
+  const biggestWord = words[0];
+  console.log(biggestWord);
+};
+searchBiggerPhrase();
