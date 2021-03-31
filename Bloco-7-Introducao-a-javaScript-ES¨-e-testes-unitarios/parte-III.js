@@ -1,0 +1,1 @@
+const clickCount = document.querySelector("#clickButton");
