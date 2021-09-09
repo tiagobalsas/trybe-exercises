@@ -1,50 +1,31 @@
-let salario_bruto = 1500.1;
-let salario_base;
-let salario_liquido;
-let inss;
-let ir;
-let valor_parcela;
 
-if (salario_bruto <= 1556.94) {
-    salario_base = `Salário base R$${salario_bruto * 0.8}`;
-    console.log(salario_base);
-    inss = `Desconto INSS R$${salario_bruto * 0.02}`;
-    console.log(inss);
-    valor_parcela = `Parcella a deduzir do imposto R$${0.0}`;
-    console.log(valor_parcela);
-    ir = `Isento de imposto de renda`;
-    console.log(ir);
-} else if (salario_bruto > 1556.95 && salario_bruto < 2594.92) {
-    if (salario_bruto > 1556.95 && salario_bruto <= 1903.98) {
-        salario_base = `Salário base R$${salario_bruto * 0.9}`;
-        console.log(salario_base);
-        inss = `Desconto INSS R$${salario_bruto * 0.03}`;
-        console.log(inss);
-        valor_parcela = `Parcella a deduzir do imposto R$${0.0}`;
-        console.log(valor_parcela);
-        ir = `Isento de imposto de renda`;
-        console.log(ir);
-    } else {
-        salario_base = `Salário base R$${salario_bruto * 0.9}`;
-        console.log(salario_base);
-        inss = `Desconto INSS R$${salario_bruto * 0.03}`;
-        console.log(inss);
-        valor_parcela = `Parcella a deduzir do imposto R$${142.8}`;
-        console.log(valor_parcela);
-        ir = `Valor do IR R$${(0.075 * salario_base) - 142.8}`;
-        console.log(ir);
-        salario_liquido = `Salário líguido R$${salario_base - ir}`
-        console.log(salario_liquido)
-    }
+let aliquotINSS;
+let aliquotIR;
+
+const grossSalary = 2000.00;
+
+if (grossSalary <= 1556.94) {
+  aliquotINSS = grossSalary * 0.08;
+} else if (grossSalary <= 2594.92) {
+  aliquotINSS = grossSalary * 0.09;
+} else if (grossSalary <= 5189.82) {
+  aliquotINSS = grossSalary * 0.11;
+} else {
+  aliquotINSS = 570.88;
 }
 
-/* else if (salario_bruto >= 2594.93 && salario_bruto <= 5189.82) {
-    salario_base = `Salário base R$${salario_bruto * 0.9}`;
-    console.log(salario_base);
-    inss = `Desconto INSS R$${salario_bruto * 0.03}`;
-    console.log(inss);
-    valor_parcela = `Parcella a deduzir do imposto R$${0.0}`;
-    console.log(valor_parcela);
-    ir = `Isento de imposto de renda`;
-    console.log(ir);
-} */
+const baseSalary = grossSalary - aliquotINSS;
+
+if (baseSalary <= 1903.98) {
+  aliquotIR = 0;
+} else if (baseSalary <= 2826.65) {
+  aliquotIR = (baseSalary * 0.075) - 142.80;
+} else if (baseSalary <= 3751.05) {
+  aliquotIR = (baseSalary * 0.15) - 354.80;
+} else if (baseSalary <= 4664.68) {
+  aliquotIR = (baseSalary * 0.225) - 636.13;
+} else {
+  aliquotIR = (baseSalary * 0.275) - 869.36;
+};
+
+console.log("Salário: " + (baseSalary - aliquotIR));
