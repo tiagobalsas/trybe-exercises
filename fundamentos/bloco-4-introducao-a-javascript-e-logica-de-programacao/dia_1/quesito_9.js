@@ -2,8 +2,14 @@
  e retorne true se pelo menos uma das três for ímpar. 
  Caso contrário, ele retorna false . */
 
- let num1 = 1;
- let num2 = 2;
- let num3 = 3;
+let a = 2;
+let b = 2;
+let c = 2;
 
- num1 % 2 !== 0 ? console.log(true) : console.log(false);
+let isFalse = false;
+
+if (a % 2 !== 0 || b % 2 !== 0 || c % 2 !== 0) {
+  isFalse = true;
+}
+
+console.log(isFalse);

@@ -1,5 +1,5 @@
 /* 
-Escreva um programa que se inicie com dois valores em duas variáveis diferentes: o custo de um produto e seu valor de venda. A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
+Escreva um programa que se "inicie com dois valores" em duas variáveis diferentes: o "custo de um produto" e seu "valor de venda". A partir dos valores, calcule quanto de lucro (valor de venda descontado o custo do produto) a empresa terá ao vender mil desses produtos.
 
 Atente que, sobre o custo do produto, incide um imposto de 20%.
 
@@ -10,16 +10,13 @@ valorCustoTotal = valorCusto + impostoSobreOCusto
 lucro = valorVenda - valorCustoTotal (lucro de um produto) 
 */
 
-let valorCusto = 2;
-let valorVenda = 4;
-let impostoSobreOCusto = 0.2;
-let valorCustoTotal;
-let lucro;
+const custoDoProduto = 1;
+const valorDeVenda = 3;
 
-if (valorCusto < 0 || valorVenda < 0) {
-  console.log("Erro");
+if (custoDoProduto >= 0 && valorDeVenda >= 0) {
+  const valorCustoTotal = custoDoProduto * 1.2;
+  const lucroTotal = (valorDeVenda - valorCustoTotal) * 1000;
+  console.log(lucroTotal);
 } else {
-  valorCustoTotal = valorVenda + (impostoSobreOCusto * valorCusto)
-  lucro = valorVenda - valorCustoTotal;
-  console.log(lucro * 1000);
+  console.log('Error, os valores não podem ser negativos');
 }
