@@ -2,8 +2,14 @@
  e retorne true se pelo menos uma das três for par. 
  Caso contrário, ele retorna false . */
 
-let num1 = 1;
-let num2 = 2;
-let num3 = 3;
+let a = 2;
+let b = 1;
+let c = 1;
 
-num2 % 2 === 0 ? console.log(true) : console.log(false);
+let isTrue = false;
+
+if (a % 2 === 0 || b % 2 === 0 || c % 2 === 0) {
+  isTrue = true;
+} else isTrue = false;
+
+console.log(isTrue);
